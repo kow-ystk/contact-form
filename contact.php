@@ -28,9 +28,9 @@
           </div>
           <div>
             <p>性別</p>
-            <input type="radio" name="gender" value="1" id="male">
+            <input type="radio" name="gender" value="male" id="male">
             <label for="male">男性</label>
-            <input type="radio" name="gender" value="2" id="female">
+            <input type="radio" name="gender" value="female" id="female">
             <label for="female">女性</label>
           </div>
           <div>
