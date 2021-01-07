@@ -6,7 +6,12 @@
   </head>
   <body>
     <?php
-      $name=htmlspecialchars($_POST['name']);
+      session_start();
+
+      if (isset($_POST['name'])) {
+        $_SESSION['name'] = htmlspecialchars($_POST['name']);
+      }
+      $name=($_SESSION['name']);
       $email=htmlspecialchars($_POST['email']);
       $checkEmail=htmlspecialchars($_POST['checkEmail']);
       $age=htmlspecialchars($_POST['age']);
@@ -19,7 +24,7 @@
       <table>
         <tr>
           <td>名前</td>
-          <td><?php echo $name; ?></td>
+          <td><?php echo $_SESSION['name']; ?></td>
         </tr>
         <tr>
           <td>メールアドレス</td>

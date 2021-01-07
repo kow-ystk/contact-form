@@ -5,12 +5,13 @@
       <title>お問い合わせフォーム</title>
   </head>
   <body>
+    <?php session_start(); ?>
     <section>
       <h1>お問い合わせ</h1>
       <form method="post" name="contactForm" action="check.php">
           <div>
             <label for="name">名前</label>
-            <input type="text" name="name" placeholder="お名前" value="" maxlength='20'>
+            <input type="text" name="name" placeholder="お名前" value="<?php if(isset($_SESSION['name'])){echo $_SESSION['name'];} ?>" maxlength='20'>
           </div>
           <div>
             <label for="email">メールアドレス</label>
