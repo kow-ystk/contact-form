@@ -15,7 +15,7 @@
       $message=htmlspecialchars($_POST['message']);
     ?>
     <h1>問い合わせ内容</h1>
-    <form action="mailto.php" method="post">
+    <form action="done.php" method="post">
       <table>
         <tr>
           <td>名前</td>
@@ -46,6 +46,7 @@
           <td><?php echo $message; ?></td>
         </tr>
       </table>
+      <a href="contact.php">入力画面へ戻る</a>
       <input type="submit" value="送信">
     </form>
   </body>
