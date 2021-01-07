@@ -6,13 +6,13 @@
   </head>
   <body>
     <?php
-      $name=$_POST['name'];
-      $email=$_POST['email'];
-      $checkEmail=$_POST['checkEmail'];
-      $age=$_POST['age'];
-      $gender=$_POST['gender'];
-      $subject=$_POST['subject'];
-      $message=$_POST['message'];
+      $name=htmlspecialchars($_POST['name']);
+      $email=htmlspecialchars($_POST['email']);
+      $checkEmail=htmlspecialchars($_POST['checkEmail']);
+      $age=htmlspecialchars($_POST['age']);
+      $gender=htmlspecialchars($_POST['gender']);
+      $subject=htmlspecialchars($_POST['subject']);
+      $message=htmlspecialchars($_POST['message']);
     ?>
     <h1>問い合わせ内容</h1>
     <form action="mailto.php" method="post">
