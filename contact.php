@@ -7,18 +7,18 @@
   <body>
     <section>
       <h1>お問い合わせ</h1>
-      <form method="post" name="contactForm">
+      <form method="post" name="contactForm" action="check.php">
           <div>
             <label for="name">名前</label>
-            <input type="text" name="name" placeholder="お名前" value="">
+            <input type="text" name="name" placeholder="お名前" value="" maxlength='20'>
           </div>
           <div>
             <label for="email">メールアドレス</label>
             <input type="email" name="email" placeholder="メールアドレス" value="">
           </div>
           <div>
-            <label for="email">確認用メールアドレス</label>
-            <input type="email" name="email" placeholder="確認用メールアドレス" value="">
+            <label for="checkEmail">確認用メールアドレス</label>
+            <input type="email" name="checkEmail" placeholder="確認用メールアドレス" value="">
           </div>
           </div>
           <div>
