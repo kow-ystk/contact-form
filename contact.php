@@ -12,6 +12,8 @@
           <div>
             <label for="name">名前</label>
             <input type="text" name="name" placeholder="お名前" value="<?php if(isset($_SESSION['name'])){echo $_SESSION['name'];} ?>" maxlength='20'>
+            <!-- もしセッションにデータが入っていたら、そのデータを出力する -->
+            <p><?php if(isset($_SESSION['error'])){echo $_SESSION['error'];} ?></p>
           </div>
           <div>
             <label for="email">メールアドレス</label>
@@ -45,5 +47,7 @@
           <button type="submit">送信</button>
       </form>
     </section>
+    <!-- 現在のセッションに関連づけられたデータを破棄する -->
+    <?php session_destroy(); ?>
   </body>
 </html>

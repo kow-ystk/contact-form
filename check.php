@@ -8,6 +8,12 @@
     <?php
       session_start();
 
+      if ($_POST['name'] === '') {
+        $_SESSION['error'] = 'お名前を入力してください。';//エラーテキストをsessionに代入する
+        header('Location: contact.php');//header関数でリダイレクト処理を行う
+        exit;//違うページにいくため、それ以後の処理を行わないように処理を終わらせる
+      }
+
       if (isset($_POST['name'])) {
         $_SESSION['name'] = htmlspecialchars($_POST['name']);
       }
