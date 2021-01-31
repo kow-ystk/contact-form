@@ -8,6 +8,12 @@
     <?php session_start(); ?>
     <section>
       <h1>お問い合わせ</h1>
+      <!--
+        method：データを送信する方法の指定 送り方にはGETとPOSTがある
+        GETはURLに付加してデータを送るので、内容が丸見え
+        個人情報などを含む場合はPOST
+        -->
+      <!-- action：フォームに入力された値を渡す先を指定 -->
       <form method="post" name="contactForm" action="check.php">
           <div>
             <label for="name">名前</label>
