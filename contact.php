@@ -23,11 +23,9 @@
             <label for="checkEmail">確認用メールアドレス</label>
             <input type="email" name="checkEmail" placeholder="確認用メールアドレス" value="">
           </div>
-          </div>
           <div>
             <label for="age">年齢</label>
             <input type="number" name="age" placeholder="年齢を数字で入力" value="">
-          </div>
           </div>
           <div>
             <p>性別</p>
