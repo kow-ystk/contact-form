@@ -51,5 +51,19 @@ https://blog.tabme.me/?p=38
 https://www.sejuku.net/blog/25276
 - 【PHP】フォームを作ってセッションを理解する（データを引き継ぐ方法）
 https://michiweb.net/php-form/
+
+## 1/7【お問い合わせフォーム: FBメモ】
+- formにnovalidateをつける
+  - HTMLのデフォルトのバリデートを禁止する
+- 完了時に送信した内容を表示させる
+- checkの内容をdoneに渡す記述を追記する
+  - check.phpのformの中にinputを入れておかないと、doneに渡せない
+  - input type="hidden"とかで調べる
+- 戻るときもaタグではなくmethodをpost
+- 入力値の保持のためにsessionを使わない(sessionで保持するものは最小限にする)
+- htmlspecial XSS対策
+  - 文字コードを明示的にいれておく。(シングルクォートなどでの脆弱性対策)
+- PHPのテンプレートエンジンを使ってみる
+  - twig
 ## 備考
 - aaa
