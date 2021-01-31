@@ -32,4 +32,24 @@
 - アプリケーションからMAMPを軌道
 - 右上のStart (Server)をクリック
 - http://localhost/contact.phpへアクセス
+## 参考リンク
+### 環境構築
+- Qiita: MacにPHP環境を構築する（MAMP）
+https://qiita.com/kutarou197/items/9ea4c7539f869a2959d2
+- TECH ACADEMY: 誰でもできる！MAMPのインストール方法【初心者向け】
+https://techacademy.jp/magazine/5102
+### コーディング
+- 【PHP】コンタクトフォームの作り方
+https://codeforfun.jp/php-contact-form-1/
+https://codeforfun.jp/php-contact-form-2/
+- PHPのhtmlspecialcharsでのHTMLエンティティ化と、一文字に簡略化方法
+https://www.flatflag.nir87.com/htmlspecialchars-555
+- phpでメールフォームをつくる①
+https://blog.tabme.me/?p=38
+### セッション保持について
+- 侍エンジニア: 【PHP入門】徹底解説！PHPでセッションを使う方法～基本から応用まで
+https://www.sejuku.net/blog/25276
+- 【PHP】フォームを作ってセッションを理解する（データを引き継ぐ方法）
+https://michiweb.net/php-form/
 ## 備考
+- aaa
