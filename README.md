@@ -28,4 +28,8 @@
 - MAMPで作ったHTMLを表示する
 - FormでPHPにポストする
 - PHP でポストされた値を見てみる
+## 軌道のさせ方
+- アプリケーションからMAMPを軌道
+- 右上のStart (Server)をクリック
+- http://localhost/contact.phpへアクセス
 ## 備考
