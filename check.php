@@ -61,7 +61,6 @@
           <td><?php echo $message; ?></td>
         </tr>
       </table>
-      <a href="contact.php">入力画面へ戻る</a>
       <input type="hidden" name="name" value="<?php echo $name; ?>">
       <input type="hidden" name="email" value="<?php echo $email; ?>">
       <input type="hidden" name="checkEmail" value="<?php echo $checkEmail; ?>">
@@ -70,6 +69,16 @@
       <input type="hidden" name="subject" value="<?php echo $subject; ?>">
       <input type="hidden" name="message" value="<?php echo $message; ?>">
       <input type="submit" value="送信">
+    </form>
+    <form action="contact.php" method="post" novalidate>
+      <input type="hidden" name="name" value="$name">
+      <input type="hidden" name="email" value="$email">
+      <input type="hidden" name="checkEmail" value="$checkEmail">
+      <input type="hidden" name="age" value="$age">
+      <input type="hidden" name="gender" value="$gender">
+      <input type="hidden" name="subject" value="$subject">
+      <input type="hidden" name="message" value="$message">
+      <input type="submit" name="backBtn" value="前のページへ戻る">
     </form>
   </body>
 </html>
