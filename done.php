@@ -66,6 +66,5 @@
       </tr>
     </table>
     <a href="contact.php">入力画面へ戻る</a>
-    <input type="submit" value="送信">
   </body>
 </html>
