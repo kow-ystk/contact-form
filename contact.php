@@ -14,7 +14,7 @@
         個人情報などを含む場合はPOST
         -->
       <!-- action：フォームに入力された値を渡す先を指定 -->
-      <form method="post" name="contactForm" action="check.php">
+      <form method="post" name="contactForm" action="check.php" novalidate>
           <div>
             <label for="name">名前</label>
             <input type="text" name="name" placeholder="お名前" value="<?php if(isset($_SESSION['name'])){echo $_SESSION['name'];} ?>" maxlength='20'>

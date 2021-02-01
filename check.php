@@ -30,7 +30,7 @@
       $message=htmlspecialchars($_POST['message']);
     ?>
     <h1>問い合わせ内容</h1>
-    <form action="done.php" method="post">
+    <form action="done.php" method="post" novalidate>
       <table>
         <tr>
           <td>名前</td>
