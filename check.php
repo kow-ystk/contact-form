@@ -34,7 +34,7 @@
       <table>
         <tr>
           <td>名前</td>
-          <td><?php echo $_SESSION['name']; ?></td>
+          <td><?php echo $name; ?></td>
         </tr>
         <tr>
           <td>メールアドレス</td>
@@ -62,6 +62,13 @@
         </tr>
       </table>
       <a href="contact.php">入力画面へ戻る</a>
+      <input type="hidden" name="name" value="<?php echo $name; ?>">
+      <input type="hidden" name="email" value="<?php echo $email; ?>">
+      <input type="hidden" name="checkEmail" value="<?php echo $checkEmail; ?>">
+      <input type="hidden" name="age" value="<?php echo $age; ?>">
+      <input type="hidden" name="gender" value="<?php echo $gender; ?>">
+      <input type="hidden" name="subject" value="<?php echo $subject; ?>">
+      <input type="hidden" name="message" value="<?php echo $message; ?>">
       <input type="submit" value="送信">
     </form>
   </body>
