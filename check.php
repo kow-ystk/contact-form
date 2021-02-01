@@ -19,15 +19,15 @@
       // エスケープ処理。htmlで特別な意味を持つ記号(“<“とか”>”とか…)を普通の文字列として扱う(=HTMLエンティティ化)という処理
       // フォームなどでユーザーが悪意のあるスクリプトを送信しようとするのを防具ため、セキュリティ上必須
       if (isset($_POST['name'])) {
-        $_SESSION['name'] = htmlspecialchars($_POST['name']);
+        $_SESSION['name'] = htmlspecialchars($_POST['name'], ENT_QUOTES, 'UTF-8');
       }
       $name=($_SESSION['name']);
-      $email=htmlspecialchars($_POST['email']);
-      $checkEmail=htmlspecialchars($_POST['checkEmail']);
-      $age=htmlspecialchars($_POST['age']);
-      $gender=htmlspecialchars($_POST['gender']);
-      $subject=htmlspecialchars($_POST['subject']);
-      $message=htmlspecialchars($_POST['message']);
+      $email=htmlspecialchars($_POST['email'], ENT_QUOTES, 'UTF-8');
+      $checkEmail=htmlspecialchars($_POST['checkEmail'], ENT_QUOTES, 'UTF-8');
+      $age=htmlspecialchars($_POST['age'], ENT_QUOTES, 'UTF-8');
+      $gender=htmlspecialchars($_POST['gender'], ENT_QUOTES, 'UTF-8');
+      $subject=htmlspecialchars($_POST['subject'], ENT_QUOTES, 'UTF-8');
+      $message=htmlspecialchars($_POST['message'], ENT_QUOTES, 'UTF-8');
     ?>
     <h1>問い合わせ内容</h1>
     <form action="done.php" method="post" novalidate>
