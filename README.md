@@ -59,6 +59,9 @@ https://qiita.com/KeisukeKudo/items/df42bbf334cb9f6eedf0
 https://qiita.com/TakamiChie/items/51bba79ee45630dbe64e
 - TECH ACADEMY: PHP開発でTwigを利用する方法を現役エンジニアが解説【初心者向け】
 https://techacademy.jp/magazine/47467
+- gitignore.io: Composerの.gitignoreファイルを作成
+→composer.pharと/vendor/をgit管理から外す
+https://www.toptal.com/developers/gitignore
 
 ## 1/7【お問い合わせフォーム: FBメモ】
 - formにnovalidateをつける
