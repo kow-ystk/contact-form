@@ -52,6 +52,14 @@ https://www.sejuku.net/blog/25276
 - 【PHP】フォームを作ってセッションを理解する（データを引き継ぐ方法）
 https://michiweb.net/php-form/
 
+### Twigの導入
+- Qiita: Composerをインストールするなら公式ドキュメントを見よう!
+https://qiita.com/KeisukeKudo/items/df42bbf334cb9f6eedf0
+- Qiita: PHPでTwig とりあえず動くところまで@Windows 8.1
+https://qiita.com/TakamiChie/items/51bba79ee45630dbe64e
+- TECH ACADEMY: PHP開発でTwigを利用する方法を現役エンジニアが解説【初心者向け】
+https://techacademy.jp/magazine/47467
+
 ## 1/7【お問い合わせフォーム: FBメモ】
 - formにnovalidateをつける
   - HTMLのデフォルトのバリデートを禁止する
@@ -65,5 +73,47 @@ https://michiweb.net/php-form/
   - 文字コードを明示的にいれておく。(シングルクォートなどでの脆弱性対策)
 - PHPのテンプレートエンジンを使ってみる
   - twig
+## 2/2【お問い合わせフォーム: FBメモ】
+- やったこと: Twigの導入
+  - Twig: PHP用のテンプレートエンジン
+  - Composer(パッケージマネージャー)をインストール。
+    - TwigはComposerによって管理されている
+- FBメモ
+  - twigでかくとhtmlspecialcharは不要になる
+  - mixin機能やextendsなどがある
+  - templates配下にhtmlファイルとしてphpを書き換える
+    - 名前が入力されていない、などのエラー文
+  - _sessionを使わずに、input(type hidden)で値の保持
+  - formの中の変数しか入れてない部分はechoでかく
+  - 重複箇所をスマートにするにはjsで切り替える方法もある
+- history
+  ```
+  476  php -r "copy（ 'https://getcomposer.org/installer'、'composer-setup.php'）;"
+  477  php -r "if（hash_file（ 'sha384'、 'composer-setup.php'）=== '乱数'）{echo 'インストーラー検証済みphp '）;} echo PHP_EOL; "
+  478  phpcomposer-setup.php
+  479  php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+  480  php -r "if (hash_file('sha384', 'composer-setup.php') === '乱数') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+  481  php composer-setup.php
+  482  php -r "unlink('composer-setup.php');"
+  483  composer require twig/twig:~3.0
+  484  ls
+  485  which -a composer
+  486  history
+  487  which composer
+  488  composer
+  489  homebrew
+  490  ./composer.phar
+  491  php composer
+  492  ./composer require twig/twig:~3.0
+  493  ./composer.phar require twig/twig:~3.0
+  494  php -v
+  495  ./composer.phar require twig/twig:~2.0
+  496  ls -al
+  497  ls -al vendor
+  498  php -s
+  499  php -S localhost:8000
+  ```
+- Next Action
+  - ダブルサブミット対策
 ## 備考
 - aaa
