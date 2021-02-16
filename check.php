@@ -30,6 +30,7 @@
       $message=htmlspecialchars($_POST['message'], ENT_QUOTES, 'UTF-8');
     ?>
     <h1>問い合わせ内容</h1>
+    <!-- action：フォームに入力された値を渡す先を指定 -->
     <form action="done.php" method="post" novalidate>
       <table>
         <tr>
@@ -61,6 +62,8 @@
           <td><?php echo $message; ?></td>
         </tr>
       </table>
+
+      <!-- sessionを使わずにinputタグのtype="hidden"で値を保持 -->
       <input type="hidden" name="name" value="<?php echo $name; ?>">
       <input type="hidden" name="email" value="<?php echo $email; ?>">
       <input type="hidden" name="checkEmail" value="<?php echo $checkEmail; ?>">
@@ -68,9 +71,14 @@
       <input type="hidden" name="gender" value="<?php echo $gender; ?>">
       <input type="hidden" name="subject" value="<?php echo $subject; ?>">
       <input type="hidden" name="message" value="<?php echo $message; ?>">
+
       <input type="submit" value="送信">
+
     </form>
+
     <form action="contact.php" method="post" novalidate>
+
+      <!-- sessionを使わずにinputタグのtype="hidden"で値を保持 -->
       <input type="hidden" name="name" value="$name">
       <input type="hidden" name="email" value="$email">
       <input type="hidden" name="checkEmail" value="$checkEmail">
@@ -78,7 +86,10 @@
       <input type="hidden" name="gender" value="$gender">
       <input type="hidden" name="subject" value="$subject">
       <input type="hidden" name="message" value="$message">
+
       <input type="submit" name="backBtn" value="前のページへ戻る">
+
     </form>
+
   </body>
 </html>
