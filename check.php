@@ -1,3 +1,7 @@
+<?php
+  // セッション(コンピュータのサーバー側に一時的にデータを保存する仕組み)を開始させる
+ session_start();
+?>
 <!DOCTYPE html>
 <html lang="jp">
   <head>
@@ -6,8 +10,6 @@
   </head>
   <body>
     <?php
-      session_start();
-
       if ($_POST['name'] === '') {
         $_SESSION['error'] = 'お名前を入力してください。';//エラーテキストをsessionに代入する
         header('Location: contact.php');//header関数でリダイレクト処理を行う

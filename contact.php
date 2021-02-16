@@ -1,3 +1,7 @@
+<?php
+  // セッション(コンピュータのサーバー側に一時的にデータを保存する仕組み)を開始させる
+ session_start();
+?>
 <!DOCTYPE html>
 <html lang="jp">
   <head>
@@ -6,8 +10,6 @@
   </head>
   <body>
 
-    <!-- セッション(コンピュータのサーバー側に一時的にデータを保存する仕組み)を開始させる -->
-    <?php session_start(); ?>
 
     <section>
       <h1>お問い合わせ</h1>
@@ -22,7 +24,7 @@
 
           <div>
             <label for="name">名前</label>
-            <input type="text" name="name" placeholder="お名前" value="<?php if(isset($name)){echo $name;} ?>" maxlength='20'>
+            <input type="text" name="name" placeholder="お名前" value="<?php if(isset($_POST['name'])){echo $_POST['name'];} ?>" maxlength='20'>
             <!-- もしセッションにデータが入っていたら、そのデータを出力する -->
             <p><?php if(isset($_SESSION['error'])){echo $_SESSION['error'];} ?></p>
           </div>

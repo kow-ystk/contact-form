@@ -10,8 +10,9 @@
   ]);
 
   // ③テンプレートのレンダリング
-  echo $twig->render('contact_twig.html', array('message' => 'Hellow World!'));
-
   $template = $twig->load('contact_twig.html');
   $twig->addGlobal("session", $_SESSION);
+  echo $twig->render('contact_twig.html', array('message' => 'Hello World!'));
+  // まずmessageをcontact_twig.htmlに表出されるようにする
+  // それができたらPOSTされた値を表出できるようにする
 ?>

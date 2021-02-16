@@ -122,10 +122,40 @@ https://www.toptal.com/developers/gitignore
   - ダブルサブミット対策
 
 ## 2/16【お問い合わせフォーム: FBメモ】
-### 疑問
-- MAMPはアプリケーションフォルダにあり、そのhtdocs配下にphpファイルを置いて起動させている。
-git管理している本プロジェクト上から転記せずに起動させるには？
-- Twigを導入したもののcontact.phpなどをどう書き換えればよいかわからない。
-- Twigの起動方法
-- ラジオボタンとテキストエリアのセッション保持の方法
-- Twigの拡張子は.twigではなく.htmlでOK?
+
+### FB
+- MAMPを使わないブラウザ表示方法について(以下Q&Aにて後述)
+- session_start();はphpファイルの1番上部に書く必要がある。(htmlのコメントがあるのも駄目。書くならPHPのコメントとしてphpのタグ内に書く。)
+- $_POST['name']は、formでpostされた値のうち、name属性がnameであるvalue属性の値を表出させる
+- もう一つ例: $_POST['email']は、formでpostされた値のうち、name属性がemailであるvalue属性の値を表出させる
+
+### Q&A
+- Q
+  - MAMPはアプリケーションフォルダにあり、そのhtdocs配下にphpファイルを置いて起動させている。
+  - git管理している本プロジェクト上から転記せずに起動させるには？
+- A
+  - php -S localhost:8000を打つ
+  - http://localhost:8000/contact.php にアクセス
+  - これでMAMPを使うことなく、ブラウザに表示することができる
+
+- Q
+  - Twigを導入したもののcontact.phpなどをどう書き換えればよいかわからない。
+- A
+  - まずはtest.phpとtest.htmlでhello worldを試す
+  - 次にcontact_twig.phpのmessageをcontact_twig.htmlに表出できるようにする
+  - それができたら、POSTされた値を表出できるように試す
+
+- Q
+  - ラジオボタンとテキストエリアのセッション保持の方法
+- A
+  - $_POST: PHPのグローバル変数。formタグのmethod属性でpostを指定した中で、inputタグのnameとvalueをセットで渡す。
+
+- Q
+  - Twigの拡張子は.twigではなく.htmlでOK?
+- A
+  -
+
+- Q
+  - Twigの起動方法
+- A
+  -
