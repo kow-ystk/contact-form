@@ -62,6 +62,7 @@ https://techacademy.jp/magazine/47467
 - gitignore.io: Composerの.gitignoreファイルを作成
 →composer.pharと/vendor/をgit管理から外す
 https://www.toptal.com/developers/gitignore
+- 本プロジェクトではTwig2.0を使用
 
 ## 1/7【お問い合わせフォーム: FBメモ】
 - formにnovalidateをつける
@@ -76,6 +77,7 @@ https://www.toptal.com/developers/gitignore
   - 文字コードを明示的にいれておく。(シングルクォートなどでの脆弱性対策)
 - PHPのテンプレートエンジンを使ってみる
   - twig
+
 ## 2/2【お問い合わせフォーム: FBメモ】
 - やったこと: Twigの導入
   - Twig: PHP用のテンプレートエンジン
@@ -118,5 +120,10 @@ https://www.toptal.com/developers/gitignore
   ```
 - Next Action
   - ダブルサブミット対策
-## 備考
-- aaa
+
+## 2/16【お問い合わせフォーム: FBメモ】
+### 疑問
+- MAMPはアプリケーションフォルダにあり、そのhtdocs配下にphpファイルを置いて起動させている。
+git管理している本プロジェクト上から転記せずに起動させるには？
+- Twigを導入したもののcontact.phpなどをどう書き換えればよいかわからない。
+- Twigの起動方法

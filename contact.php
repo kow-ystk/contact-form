@@ -14,6 +14,7 @@
         個人情報などを含む場合はPOST
         -->
       <!-- action：フォームに入力された値を渡す先を指定 -->
+      <!-- novalidate：フォームの入力内容の検証を無効化 -->
       <form method="post" name="contactForm" action="check.php" novalidate>
           <div>
             <label for="name">名前</label>
