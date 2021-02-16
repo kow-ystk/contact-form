@@ -127,3 +127,4 @@ https://www.toptal.com/developers/gitignore
 git管理している本プロジェクト上から転記せずに起動させるには？
 - Twigを導入したもののcontact.phpなどをどう書き換えればよいかわからない。
 - Twigの起動方法
+- ラジオボタンとテキストエリアのセッション保持の方法

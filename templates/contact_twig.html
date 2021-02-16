@@ -28,15 +28,15 @@
         </div>
         <div>
           <label for="email">メールアドレス</label>
-          <input type="email" name="email" placeholder="メールアドレス" value="">
+          <input type="email" name="email" placeholder="メールアドレス" value="{% if session.email %}{{ session.email }}{% endif %}">
         </div>
         <div>
           <label for="checkEmail">確認用メールアドレス</label>
-          <input type="email" name="checkEmail" placeholder="確認用メールアドレス" value="">
+          <input type="email" name="checkEmail" placeholder="確認用メールアドレス" value="{% if session.checkEmail %}{{ session.checkEmail }}{% endif %}">
         </div>
         <div>
           <label for="age">年齢</label>
-          <input type="number" name="age" placeholder="年齢を数字で入力" value="">
+          <input type="number" name="age" placeholder="年齢を数字で入力" value="{% if session.age %}{{ session.age }}{% endif %}">
         </div>
         <div>
           <p>性別</p>
@@ -47,7 +47,7 @@
         </div>
         <div>
           <label for="subject">件名</label>
-          <input type="text" name="subject" placeholder="件名" value="">
+          <input type="text" name="subject" placeholder="件名" value="{% if session.subject %}{{ session.subject }}{% endif %}">
         </div>
         <div>
           <label for="message">本文</label>
